@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond $1 !^(library)
+RewriteRule ^(.+)$ index.php [QSA,L]

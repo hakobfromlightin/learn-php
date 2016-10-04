@@ -1,8 +1,6 @@
 <?php
 
-require 'functions.php';
-require 'Task.php';
+$builder = require 'core/bootstrap.php';
 
-$tasks = fetchAllTasks(connectToPDO());
-
-require 'index.view.php';
+require Router::load('routes.php')
+    ->direct(Request::uri());
