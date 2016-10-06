@@ -1,5 +1,5 @@
 <?php
 
-$tasks = $app['database']->selectAll('tasks', 'Task');
+$tasks = App::get('database')->selectAll('tasks', 'Task');
 
 require 'views/index.view.php';
