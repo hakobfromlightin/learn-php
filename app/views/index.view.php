@@ -1,4 +1,4 @@
-<?php require('views/partials/head.view.php'); ?>
+<?php require('app/views/partials/head.view.php'); ?>
 <h1>New Task</h1>
 <form action="/task" method="POST">
     <label>Name:
@@ -23,4 +23,4 @@
         </li>
     <?php endforeach; ?>
 </ul>
-<?php require('views/partials/footer.view.php'); ?>
+<?php require('app/views/partials/footer.view.php'); ?>

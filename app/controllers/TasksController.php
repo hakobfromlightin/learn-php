@@ -1,10 +1,14 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\App;
+
 class TasksController
 {
     public function index()
     {
-        $tasks = App::get('database')->selectAll('tasks', 'Task');
+        $tasks = App::get('database')->selectAll('tasks', 'App\Models\Task');
 
         return view('index', compact('tasks'));
     }
