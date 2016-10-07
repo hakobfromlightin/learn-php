@@ -6,23 +6,33 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit35d043dafb216e26254a022986f28183
 {
+    public static $prefixLengthsPsr4 = array (
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
+    );
+
     public static $classMap = array (
-        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
-        'App\\Controllers\\TasksController' => __DIR__ . '/../..' . '/app/controllers/TasksController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'App\\Models\\Task' => __DIR__ . '/../..' . '/app/models/Task.php',
-        'ComposerAutoloaderInit35d043dafb216e26254a022986f28183' => __DIR__ . '/..' . '/composer/autoload_real.php',
-        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\ComposerStaticInit35d043dafb216e26254a022986f28183' => __DIR__ . '/..' . '/composer/autoload_static.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit35d043dafb216e26254a022986f28183::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit35d043dafb216e26254a022986f28183::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit35d043dafb216e26254a022986f28183::$classMap;
 
         }, null, ClassLoader::class);
