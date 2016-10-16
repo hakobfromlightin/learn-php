@@ -8,5 +8,8 @@
     "psr-4": {
       "App\\": "app/"
     }
+  },
+  "require": {
+    "phpspec/phpspec": "^3.1"
   }
 }
